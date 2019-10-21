@@ -20,11 +20,10 @@
 #define GROVE_LED 3069
 
 // Temperature and Humidity Sensor
-#define DHT11 3032
-#define DHT22 3031
+#define DHT11 3031
+#define DHT22 3032
 
-// Temperature
-#define GROVE_TEMPERATURE 3033
+// HUmidity Sensor
 
 // GPS Sensor
 #define U_BLOX 3018
@@ -74,11 +73,5 @@
 
 // Display
 #define GROVE_LCD_RGB 3063
-
-// Bulb
-#define GROVE_CHAINABLE_RGB_BULB 3067
-
-//Car
-#define GROVE_CAR 3068
 
 #endif

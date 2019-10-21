@@ -67,14 +67,22 @@
 #ifdef TINYLINK_TEMPERATURE
 	#if TINYLINK_TEMPERATURE == DHT11
 		#include "DHT11_Temperature_LinkIt_One.h"
+	#elif TINYLINK_TEMPERATURE == DHT22
+		#include "DHT22_Temperature_LinkIt_One.h"
 	#elif TINYLINK_TEMPERATURE == GROVE_TEMPERATURE
 		#include "Grove_Temperature_Temperature_LinkIt_One.h"
+	#elif TINYLINK_TEMPERATURE == TH02
+		#include "TH02_Temperature_LinkIt_One.h"
 	#endif
 #endif
 
 #ifdef TINYLINK_HUMIDITY
 	#if TINYLINK_HUMIDITY == DHT11
 		#include "DHT11_Humidity_LinkIt_One.h"
+	#elif TINYLINK_HUMIDITY == DHT22
+		#include "DHT22_Humidity_LinkIt_One.h"
+	#elif TINYLINK_HUMIDITY == TH02
+		#include "TH02_Humidity_LinkIt_One.h"
 	#endif
 #endif
 
@@ -84,15 +92,25 @@
 	#endif
 #endif
 
+#ifdef TINYLINK_HCHO
+	#if TINYLINK_HCHO == GROVE_HCHO
+		#include "Grove_HCHO_HCHO_LinkIt_One.h"
+	#endif
+#endif
+
 #ifdef TINYLINK_LIGHT
 	#if TINYLINK_LIGHT == GROVE_LIGHT
 		#include "Grove_Light_Light_LinkIt_One.h"
+	#elif TINYLINK_LIGHT == GROVE_DIGITAL_LIGHT
+		#include "Grove_Digital_Light_Light_LinkIt_One.h"
 	#endif
 #endif
 
 #ifdef TINYLINK_SOIL_HUMIDITY
 	#if TINYLINK_SOIL_HUMIDITY == SOIL_MOISTURE_ANALOG
 		#include "Soil_Moisture_Analog_Soil_Humidity_LinkIt_One.h"
+	#elif TINYLINK_SOIL_HUMIDITY == GROVE_MOISTURE
+		#include "Grove_Moisture_Soil_Humidity_LinkIt_One.h"
 	#endif
 #endif
 
@@ -146,6 +164,12 @@
 #ifdef TINYLINK_MOTOR
 	#if TINYLINK_MOTOR == GROVE_DC_MOTOR
 		#include "Grove_DC_Motor_Motor_LinkIt_One.h"
+	#endif
+#endif
+
+#ifdef TINYLINK_CAR
+	#if TINYLINK_CAR == GROVE_CAR
+		#include "Grove_Car_Car_LinkIt_One.h"
 	#endif
 #endif
 

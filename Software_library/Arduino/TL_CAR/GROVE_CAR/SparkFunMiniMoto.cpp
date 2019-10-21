@@ -56,7 +56,9 @@ void MiniMoto::drive(int speed)
   if (regValue > 63) regValue = 63; // Cap the value at 63.
   regValue = regValue<<2;           // Left shift to make room for bits 1:0
   if (speed < 0) regValue |= 0x01;  // Set bits 1:0 based on sign of input.
+
   else if (speed == 0) regValue |= 0x03;
+
   else           regValue |= 0x02;
   
   I2CWriteBytes(0x00, &regValue, 1);  

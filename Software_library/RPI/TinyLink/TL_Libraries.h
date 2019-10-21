@@ -40,10 +40,6 @@
 	#if PLATFORM == 4 && BOARD == 1003
 		#if TINYLINK_TEMPERATURE == DHT11
 			#include "DHT11_Temperature_RPI.h"
-		#elif TINYLINK_TEMPERATURE == DHT22
-			#include "DHT22_Temperature_RPI.h"
-		#elif TINYLINK_TEMPERATURE == GROVE_TEMPERATURE
-			#include "Grove_Temperature_Temperature_RPI.h"
 		#endif
 	#endif
 #endif
@@ -52,8 +48,6 @@
 	#if PLATFORM == 4 && BOARD == 1003
 		#if TINYLINK_HUMIDITY == DHT11
 			#include "DHT11_Humidity_RPI.h"
-		#elif TINYLINK_HUMIDITY == DHT22
-			#include "DHT22_Humidity_RPI.h"
 		#endif
 	#endif
 #endif
@@ -154,22 +148,6 @@
 	#if TINYLINK_DISPLAY == GROVE_LCD_RGB
 		#include "Grove_LCD_RGB_Display_RPI.h"
 	#endif
-#endif
-
-#ifdef TINYLINK_BULB
-	#if PLATFORM == 4 && BOARD == 1003
-		#if TINYLINK_BULB == GROVE_CHAINABLE_RGB_BULB
-			#include "Grove_Chainable_RGB_Bulb_Bulb_RPI.h"
-		#endif
-	#endif
-#endif
-
-#ifdef TINYLINK_CAR
-        #if PLATFORM == 4 && BOARD == 1003
-                #if TINYLINK_CAR == GROVE_CAR
-                        #include "Grove_Car_Car_RPI.h"
-                #endif
-        #endif
 #endif
 
 #endif
